@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface SecondViewController : UIViewController
-
-
+    @property (weak, nonatomic) IBOutlet UILabel *seriesLabel;
+    @property (weak, nonatomic) IBOutlet UICollectionView *seriesCollectionView;
 @end
 

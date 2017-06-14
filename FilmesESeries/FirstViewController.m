@@ -8,6 +8,7 @@
 
 #import "FirstViewController.h"
 
+
 @interface FirstViewController ()
 
 @end
@@ -16,7 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [[MyNetworkHandler sharedInstance] fetchDataFromServer:^(BOOL isSuccess, NSArray *movies) {
+        
+    }];
 }
 
 

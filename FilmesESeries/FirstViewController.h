@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MyNetworkHandler.h"
 
 @interface FirstViewController : UIViewController
-
-
+    @property (weak, nonatomic) IBOutlet UILabel *filmesLabel;
+    @property (weak, nonatomic) IBOutlet UICollectionView *filmesCollectionView;
 @end
 

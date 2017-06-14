@@ -17,6 +17,7 @@
 		7F4819971EF164CB002F2534 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F4819951EF164CB002F2534 /* LaunchScreen.storyboard */; };
 		7F4819A21EF164CB002F2534 /* FilmesESeriesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4819A11EF164CB002F2534 /* FilmesESeriesTests.m */; };
 		7F4819AD1EF164CB002F2534 /* FilmesESeriesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4819AC1EF164CB002F2534 /* FilmesESeriesUITests.m */; };
+		7F4819BC1EF1686B002F2534 /* MyNetworkHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4819BB1EF1686B002F2534 /* MyNetworkHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		7F4819A81EF164CB002F2534 /* FilmesESeriesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FilmesESeriesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F4819AC1EF164CB002F2534 /* FilmesESeriesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmesESeriesUITests.m; sourceTree = "<group>"; };
 		7F4819AE1EF164CB002F2534 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F4819BA1EF1686B002F2534 /* MyNetworkHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNetworkHandler.h; sourceTree = "<group>"; };
+		7F4819BB1EF1686B002F2534 /* MyNetworkHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNetworkHandler.m; sourceTree = "<group>"; };
 		893F51774E48C0902D913B43 /* Pods-FilmesESeries.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FilmesESeries.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FilmesESeries/Pods-FilmesESeries.debug.xcconfig"; sourceTree = "<group>"; };
 		E2835647FD8D3B81CC9D96B5 /* libPods-FilmesESeries.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FilmesESeries.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -134,6 +137,8 @@
 				7F48198B1EF164CB002F2534 /* FirstViewController.m */,
 				7F48198D1EF164CB002F2534 /* SecondViewController.h */,
 				7F48198E1EF164CB002F2534 /* SecondViewController.m */,
+				7F4819BA1EF1686B002F2534 /* MyNetworkHandler.h */,
+				7F4819BB1EF1686B002F2534 /* MyNetworkHandler.m */,
 				7F4819901EF164CB002F2534 /* Main.storyboard */,
 				7F4819931EF164CB002F2534 /* Assets.xcassets */,
 				7F4819951EF164CB002F2534 /* LaunchScreen.storyboard */,
@@ -357,6 +362,7 @@
 				7F4819891EF164CB002F2534 /* AppDelegate.m in Sources */,
 				7F48198C1EF164CB002F2534 /* FirstViewController.m in Sources */,
 				7F4819861EF164CB002F2534 /* main.m in Sources */,
+				7F4819BC1EF1686B002F2534 /* MyNetworkHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,6 +596,7 @@
 				7F4819B31EF164CB002F2534 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7F4819B41EF164CB002F2534 /* Build configuration list for PBXNativeTarget "FilmesESeriesTests" */ = {
 			isa = XCConfigurationList;
@@ -598,6 +605,7 @@
 				7F4819B61EF164CB002F2534 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7F4819B71EF164CB002F2534 /* Build configuration list for PBXNativeTarget "FilmesESeriesUITests" */ = {
 			isa = XCConfigurationList;
@@ -606,6 +614,7 @@
 				7F4819B91EF164CB002F2534 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
