@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "MyNetworkHandler.h"
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
     @property (weak, nonatomic) IBOutlet UILabel *filmesLabel;
+    @property (weak, nonatomic) IBOutlet UICollectionViewCell *firstCollectionCell;
     @property (weak, nonatomic) IBOutlet UICollectionView *filmesCollectionView;
 @end
 
