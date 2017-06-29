@@ -18,6 +18,9 @@
 		7F4819A21EF164CB002F2534 /* FilmesESeriesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4819A11EF164CB002F2534 /* FilmesESeriesTests.m */; };
 		7F4819AD1EF164CB002F2534 /* FilmesESeriesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4819AC1EF164CB002F2534 /* FilmesESeriesUITests.m */; };
 		7F4819BC1EF1686B002F2534 /* MyNetworkHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4819BB1EF1686B002F2534 /* MyNetworkHandler.m */; };
+		7F9E37DE1F052E9F005AE684 /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9E37DC1F052E9F005AE684 /* MovieCell.m */; };
+		7F9E37DF1F052E9F005AE684 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F9E37DD1F052E9F005AE684 /* MovieCell.xib */; };
+		7F9E37E21F054AC3005AE684 /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9E37E11F054AC3005AE684 /* detailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,11 @@
 		7F4819AE1EF164CB002F2534 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F4819BA1EF1686B002F2534 /* MyNetworkHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNetworkHandler.h; sourceTree = "<group>"; };
 		7F4819BB1EF1686B002F2534 /* MyNetworkHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNetworkHandler.m; sourceTree = "<group>"; };
+		7F9E37DB1F052E9F005AE684 /* MovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
+		7F9E37DC1F052E9F005AE684 /* MovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
+		7F9E37DD1F052E9F005AE684 /* MovieCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
+		7F9E37E01F054AC3005AE684 /* detailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailViewController.h; sourceTree = "<group>"; };
+		7F9E37E11F054AC3005AE684 /* detailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailViewController.m; sourceTree = "<group>"; };
 		893F51774E48C0902D913B43 /* Pods-FilmesESeries.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FilmesESeries.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FilmesESeries/Pods-FilmesESeries.debug.xcconfig"; sourceTree = "<group>"; };
 		E2835647FD8D3B81CC9D96B5 /* libPods-FilmesESeries.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FilmesESeries.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -135,6 +143,11 @@
 				7F4819881EF164CB002F2534 /* AppDelegate.m */,
 				7F48198A1EF164CB002F2534 /* FirstViewController.h */,
 				7F48198B1EF164CB002F2534 /* FirstViewController.m */,
+				7F9E37DB1F052E9F005AE684 /* MovieCell.h */,
+				7F9E37DC1F052E9F005AE684 /* MovieCell.m */,
+				7F9E37E01F054AC3005AE684 /* detailViewController.h */,
+				7F9E37E11F054AC3005AE684 /* detailViewController.m */,
+				7F9E37DD1F052E9F005AE684 /* MovieCell.xib */,
 				7F48198D1EF164CB002F2534 /* SecondViewController.h */,
 				7F48198E1EF164CB002F2534 /* SecondViewController.m */,
 				7F4819BA1EF1686B002F2534 /* MyNetworkHandler.h */,
@@ -285,6 +298,7 @@
 			files = (
 				7F4819971EF164CB002F2534 /* LaunchScreen.storyboard in Resources */,
 				7F4819941EF164CB002F2534 /* Assets.xcassets in Resources */,
+				7F9E37DF1F052E9F005AE684 /* MovieCell.xib in Resources */,
 				7F4819921EF164CB002F2534 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +374,8 @@
 			files = (
 				7F48198F1EF164CB002F2534 /* SecondViewController.m in Sources */,
 				7F4819891EF164CB002F2534 /* AppDelegate.m in Sources */,
+				7F9E37DE1F052E9F005AE684 /* MovieCell.m in Sources */,
+				7F9E37E21F054AC3005AE684 /* detailViewController.m in Sources */,
 				7F48198C1EF164CB002F2534 /* FirstViewController.m in Sources */,
 				7F4819861EF164CB002F2534 /* main.m in Sources */,
 				7F4819BC1EF1686B002F2534 /* MyNetworkHandler.m in Sources */,

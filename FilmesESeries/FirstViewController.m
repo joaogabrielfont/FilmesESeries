@@ -17,8 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
+    [self.filmesCollectionView registerNib: [UINib nibWithNibName:@"MovieCell" bundle:nil] forCellWithReuseIdentifier:@"MovieCell"];
+    self.filmesCollectionView.delegate = self;
+    self.filmesCollectionView.dataSource = self;
 }
 
 
@@ -27,29 +28,37 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(self.view.frame.size.width/2, self.view.frame.size.height);
+    
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    float cellWidth = screenWidth / 2.0; //Replace the divisor with the column count requirement. Make sure to have it in float.
+    CGSize size = CGSizeMake(cellWidth, cellWidth);
+    return size;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 1;
+    return 2;
 }
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    return 1;
+    return 4;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    detailViewController* vc = [sb instantiateViewControllerWithIdentifier:@"detailViewController"];
+    vc.posterView.image = [UIImage imageNamed:@"spidey"];
+    vc.nameLabel.text = @"Supaidaman";
+    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CellIdentifier" forIndexPath:indexPath];
-    UIImageView *image = [[UIImageView alloc]init];
-    UILabel *label = [[UILabel alloc] init];
-    label.text = @"please something happen";
-    [cell addSubview:label];
-    image.image = [UIImage imageNamed:@"spidey.jpg"];
-    image.frame = CGRectMake(0, 0, cell.frame.size.width, cell.frame.size.height);
-    [cell addSubview:image];
+    MovieCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MovieCell" forIndexPath:indexPath];
+    cell.movieLabel.text = @"Spoderman";
+    cell.moviePoster.image = [UIImage imageNamed:@"spidey"];
+    cell.yearLabel.text = @"2017";
     return cell;
 }
 
