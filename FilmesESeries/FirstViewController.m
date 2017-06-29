@@ -45,14 +45,16 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    detailViewController* vc = [sb instantiateViewControllerWithIdentifier:@"detailViewController"];
-    vc.posterView.image = [UIImage imageNamed:@"spidey"];
-    vc.nameLabel.text = @"Supaidaman";
-    [self.navigationController pushViewController:vc animated:YES];
+    UIImage *homeAranha = [UIImage imageNamed:@"spidey"];
+    [self performSegueWithIdentifier:@"segueToDetails" sender:homeAranha];
     
 }
 
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    detailViewController* vc = [segue destinationViewController];
+    vc.image = (UIImage*) sender;
+    
+}
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     MovieCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MovieCell" forIndexPath:indexPath];

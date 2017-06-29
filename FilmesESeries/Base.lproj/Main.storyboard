@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -59,7 +60,7 @@
                     <connections>
                         <outlet property="filmesCollectionView" destination="xbR-oZ-06G" id="nPV-Cw-sbo"/>
                         <outlet property="filmesLabel" destination="f2i-Xe-ccM" id="00q-L9-s67"/>
-                        <segue destination="wFG-BH-hKc" kind="show" id="5t1-RC-Nd1"/>
+                        <segue destination="wFG-BH-hKc" kind="show" identifier="segueToDetails" id="5t1-RC-Nd1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -78,19 +79,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KSZ-Je-EJt">
-                                <rect key="frame" x="67" y="28" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KSZ-Je-EJt">
+                                <rect key="frame" x="77" y="40" width="221" height="295"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="KSZ-Je-EJt" secondAttribute="height" multiplier="3:4" id="9Rj-8a-c3N"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuB-1Z-iIU">
-                                <rect key="frame" x="166" y="209" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuB-1Z-iIU">
+                                <rect key="frame" x="166" y="441" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KSZ-Je-EJt" firstAttribute="centerX" secondItem="zuB-1Z-iIU" secondAttribute="centerX" id="Hxh-I1-OXK"/>
+                            <constraint firstItem="MPy-zH-3dw" firstAttribute="top" secondItem="zuB-1Z-iIU" secondAttribute="bottom" constant="156" id="dqt-PC-4b0"/>
+                            <constraint firstItem="KSZ-Je-EJt" firstAttribute="centerX" secondItem="thD-pk-Zdo" secondAttribute="centerX" id="gIT-xG-hVN"/>
+                            <constraint firstItem="KSZ-Je-EJt" firstAttribute="leading" secondItem="thD-pk-Zdo" secondAttribute="leadingMargin" constant="61" id="jhc-QM-DLw"/>
+                            <constraint firstItem="zuB-1Z-iIU" firstAttribute="centerX" secondItem="KSZ-Je-EJt" secondAttribute="centerX" id="l4N-AV-49z"/>
+                            <constraint firstItem="KSZ-Je-EJt" firstAttribute="top" secondItem="6dQ-J2-nsI" secondAttribute="bottom" constant="20" id="uE6-fx-Ocn"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="nameLabel" destination="zuB-1Z-iIU" id="imw-fq-61V"/>
@@ -99,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pII-be-NUp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1519" y="-325"/>
+            <point key="canvasLocation" x="1517.5999999999999" y="-325.18740629685158"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
