@@ -10,7 +10,8 @@
 
 
 @interface FirstViewController ()
-
+@property NSMutableArray* nomes;
+@property NSMutableArray* images;
 @end
 
 @implementation FirstViewController
@@ -20,6 +21,19 @@
     [self.filmesCollectionView registerNib: [UINib nibWithNibName:@"MovieCell" bundle:nil] forCellWithReuseIdentifier:@"MovieCell"];
     self.filmesCollectionView.delegate = self;
     self.filmesCollectionView.dataSource = self;
+    _nomes = [[NSMutableArray alloc] init];
+    _images = [[NSMutableArray alloc] init];
+    
+    [_nomes addObject:@"Homem Aranha: De Volta ao lar"];
+    [_nomes addObject:@"Carros 3"];
+    [_nomes addObject:@"Corra!"];
+    [_nomes addObject:@"Mulher Maravilha"];
+    
+    [_images addObject:[UIImage imageNamed:@"spidey"]];
+    [_images addObject:[UIImage imageNamed:@"cars"]];
+    [_images addObject:[UIImage imageNamed:@"corra"]];
+    [_images addObject:[UIImage imageNamed:@"wonder"]];
+    
 }
 
 
@@ -32,21 +46,21 @@
     
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     CGFloat screenWidth = screenRect.size.width;
-    float cellWidth = screenWidth / 2.0; //Replace the divisor with the column count requirement. Make sure to have it in float.
-    CGSize size = CGSizeMake(cellWidth, cellWidth);
+    float cellWidth = screenWidth / 3.0f; //Replace the divisor with the column count requirement. Make sure to have it in float.
+    CGSize size = CGSizeMake(cellWidth, 207);
     return size;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 2;
+    return 4;
 }
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    return 4;
+    return 1;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    UIImage *homeAranha = [UIImage imageNamed:@"spidey"];
-    [self performSegueWithIdentifier:@"segueToDetails" sender:homeAranha];
+    UIImage *temp = [_images objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"segueToDetails" sender:temp];
     
 }
 
@@ -58,8 +72,8 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     MovieCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MovieCell" forIndexPath:indexPath];
-    cell.movieLabel.text = @"Spoderman";
-    cell.moviePoster.image = [UIImage imageNamed:@"spidey"];
+    cell.movieLabel.text = [_nomes objectAtIndex:indexPath.row];
+    cell.moviePoster.image = [_images objectAtIndex:indexPath.row];
     cell.yearLabel.text = @"2017";
     return cell;
 }

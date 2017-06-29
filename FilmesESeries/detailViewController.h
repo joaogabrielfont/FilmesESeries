@@ -10,6 +10,6 @@
 
 @interface detailViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *posterView;
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UIButton *goBackButton;
 @property (weak, nonatomic) IBOutlet UIImage *image;
 @end
