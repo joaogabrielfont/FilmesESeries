@@ -46,11 +46,17 @@
     
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     CGFloat screenWidth = screenRect.size.width;
-    float cellWidth = screenWidth / 3.0f; //Replace the divisor with the column count requirement. Make sure to have it in float.
-    CGSize size = CGSizeMake(cellWidth, 207);
+    float cellWidth = screenWidth / 4.0f; //Replace the divisor with the column count requirement. Make sure to have it in float.
+    CGSize size = CGSizeMake(127, 207);
     return size;
 }
 
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    return 0;
+}
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    return 0;
+}
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return 4;
 }
