@@ -13,10 +13,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCell" id="gTV-IL-0wX" customClass="MovieCell">
-            <rect key="frame" x="0.0" y="0.0" width="124" height="266"/>
+            <rect key="frame" x="0.0" y="0.0" width="119" height="190"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="124" height="266"/>
+                <rect key="frame" x="0.0" y="0.0" width="119" height="190"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wpZ-nR-4Sl">
@@ -27,7 +27,7 @@
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="D8U-Ra-xuI">
-                        <rect key="frame" x="158" y="16" width="42" height="80"/>
+                        <rect key="frame" x="158" y="16" width="37" height="4"/>
                     </stackView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C59-SE-ULW">
                         <rect key="frame" x="20" y="149" width="90" height="21"/>
@@ -53,7 +53,7 @@
                 <constraint firstAttribute="bottom" secondItem="D8U-Ra-xuI" secondAttribute="bottom" constant="170" id="hZh-s6-hMT"/>
                 <constraint firstItem="D8U-Ra-xuI" firstAttribute="leading" secondItem="wpZ-nR-4Sl" secondAttribute="trailing" constant="48" id="mS3-A2-kbm"/>
             </constraints>
-            <size key="customSize" width="122" height="247"/>
+            <size key="customSize" width="117" height="171"/>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                     <integer key="value" value="2"/>
@@ -64,7 +64,7 @@
                 <outlet property="moviePoster" destination="wpZ-nR-4Sl" id="LsQ-1T-1lg"/>
                 <outlet property="yearLabel" destination="aRQ-zs-f8C" id="UOP-d7-hPz"/>
             </connections>
-            <point key="canvasLocation" x="61" y="150"/>
+            <point key="canvasLocation" x="58.5" y="117"/>
         </collectionViewCell>
     </objects>
 </document>
