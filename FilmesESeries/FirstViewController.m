@@ -20,22 +20,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.filmesCollectionView registerNib: [UINib nibWithNibName:@"MovieCell" bundle:nil] forCellWithReuseIdentifier:@"MovieCell"];
+[self.filmesCollectionView registerNib: [UINib nibWithNibName:@"MovieCell" bundle:nil] forCellWithReuseIdentifier:@"MovieCell"];
     self.filmesCollectionView.delegate = self;
     self.filmesCollectionView.dataSource = self;
     
-    _nomes = [[NSMutableArray alloc] init];
-    _images = [[NSMutableArray alloc] init];
+    self.nomes = [[NSMutableArray alloc] init];
+    self.images = [[NSMutableArray alloc] init];
     
-    [_nomes addObject:@"Homem Aranha: De Volta ao lar"];
-    [_nomes addObject:@"Carros 3"];
-    [_nomes addObject:@"Corra!"];
-    [_nomes addObject:@"Mulher Maravilha"];
+    [self.nomes addObject:@"Homem Aranha: De Volta ao lar"];
+    [self.nomes addObject:@"Carros 3"];
+    [self.nomes addObject:@"Corra!"];
+    [self.nomes addObject:@"Mulher Maravilha"];
     
-    [_images addObject:[UIImage imageNamed:@"spidey"]];
-    [_images addObject:[UIImage imageNamed:@"cars"]];
-    [_images addObject:[UIImage imageNamed:@"corra"]];
-    [_images addObject:[UIImage imageNamed:@"wonder"]];
+    [self.images addObject:[UIImage imageNamed:@"spidey"]];
+    [self.images addObject:[UIImage imageNamed:@"cars"]];
+    [self.images addObject:[UIImage imageNamed:@"corra"]];
+    [self.images addObject:[UIImage imageNamed:@"wonder"]];
     
     self.leftAndRightPaddings = 0;
     self.numberOfItemsPerRow = 3.0f;
@@ -53,8 +53,8 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     CGFloat collectionViewWidth = self.filmesCollectionView.frame.size.width;
-    CGFloat itemWidth = (collectionViewWidth - self.leftAndRightPaddings) / self.numberOfItemsPerRow;
-    return CGSizeMake(itemWidth-50, itemWidth*2 - 50);
+    CGFloat itemWidth = (collectionViewWidth/ self.numberOfItemsPerRow);
+    return CGSizeMake((itemWidth/2)+19,itemWidth);
 }
 
 //- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
@@ -73,15 +73,15 @@
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
     return 10.0f;
 }
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return 4;
 }
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    return 2;
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 4;
 }
 
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    UIImage *temp = [_images objectAtIndex:indexPath.row];
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    UIImage *temp = [self.images objectAtIndex:indexPath.row];
     [self performSegueWithIdentifier:@"segueToDetails" sender:temp];
     
 }
@@ -92,11 +92,9 @@
     
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MovieCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MovieCell" forIndexPath:indexPath];
-    cell.movieLabel.text = [_nomes objectAtIndex:indexPath.row];
-    cell.moviePoster.image = [_images objectAtIndex:indexPath.row];
-    cell.yearLabel.text = @"2017";
+    cell.moviePoster.image = [self.images objectAtIndex:indexPath.row];
     return cell;
 }
 

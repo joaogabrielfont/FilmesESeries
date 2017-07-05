@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,50 +18,25 @@
                 <rect key="frame" x="0.0" y="0.0" width="119" height="190"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wpZ-nR-4Sl">
-                        <rect key="frame" x="10" y="10" width="100" height="134"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="wpZ-nR-4Sl" secondAttribute="height" multiplier="3:4" id="ZnI-E7-B8H"/>
-                            <constraint firstAttribute="width" constant="100" id="bcb-UC-PYa" userLabel="width = 60"/>
-                        </constraints>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wpZ-nR-4Sl">
+                        <rect key="frame" x="0.0" y="0.0" width="119" height="190"/>
                     </imageView>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="D8U-Ra-xuI">
-                        <rect key="frame" x="158" y="16" width="37" height="4"/>
-                    </stackView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C59-SE-ULW">
-                        <rect key="frame" x="20" y="149" width="90" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRQ-zs-f8C">
-                        <rect key="frame" x="20" y="166" width="84" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="wpZ-nR-4Sl" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="Kh6-Dq-KwZ"/>
-                <constraint firstAttribute="trailing" secondItem="D8U-Ra-xuI" secondAttribute="trailing" constant="-76" id="Y3h-2e-uul"/>
-                <constraint firstItem="wpZ-nR-4Sl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="g37-mw-veU"/>
-                <constraint firstItem="D8U-Ra-xuI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="gy4-bg-WVm"/>
-                <constraint firstAttribute="bottom" secondItem="D8U-Ra-xuI" secondAttribute="bottom" constant="170" id="hZh-s6-hMT"/>
-                <constraint firstItem="D8U-Ra-xuI" firstAttribute="leading" secondItem="wpZ-nR-4Sl" secondAttribute="trailing" constant="48" id="mS3-A2-kbm"/>
+                <constraint firstItem="wpZ-nR-4Sl" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="3ug-OK-AkR"/>
+                <constraint firstItem="wpZ-nR-4Sl" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="M5U-JP-kB3"/>
+                <constraint firstItem="wpZ-nR-4Sl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="vh0-QZ-log"/>
+                <constraint firstItem="wpZ-nR-4Sl" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" id="xPx-Vw-FQ7"/>
             </constraints>
             <size key="customSize" width="117" height="171"/>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                    <integer key="value" value="2"/>
+                    <integer key="value" value="1"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
-                <outlet property="movieLabel" destination="C59-SE-ULW" id="VSp-A6-0iY"/>
                 <outlet property="moviePoster" destination="wpZ-nR-4Sl" id="LsQ-1T-1lg"/>
-                <outlet property="yearLabel" destination="aRQ-zs-f8C" id="UOP-d7-hPz"/>
             </connections>
             <point key="canvasLocation" x="58.5" y="117"/>
         </collectionViewCell>

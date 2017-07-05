@@ -36,7 +36,7 @@
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="7" minY="5" maxX="7" maxY="5"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
                                 <userDefinedRuntimeAttributes>
@@ -129,26 +129,40 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pdf-oK-hrf">
-                                <rect key="frame" x="16" y="107" width="343" height="453"/>
+                                <rect key="frame" x="0.0" y="107" width="375" height="511"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4uM-TN-3lp">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="4uM-TN-3lp">
                                     <size key="itemSize" width="159" height="141"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Cell" reuseIdentifier="Cell" id="vO7-fM-FhT">
+                                        <rect key="frame" x="0.0" y="0.0" width="159" height="141"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="159" height="141"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidht">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </collectionViewCell>
+                                </cells>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.16078431369999999" green="0.50196078430000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="pdf-oK-hrf" firstAttribute="leading" secondItem="eD6-Z2-WJ3" secondAttribute="leading" id="6q5-zz-0bF"/>
-                            <constraint firstItem="pdf-oK-hrf" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="EZC-pk-Twl"/>
+                            <constraint firstItem="pdf-oK-hrf" firstAttribute="leading" secondItem="eD6-Z2-WJ3" secondAttribute="leading" constant="-16" id="6q5-zz-0bF"/>
+                            <constraint firstItem="pdf-oK-hrf" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-16" id="EZC-pk-Twl"/>
                             <constraint firstItem="pdf-oK-hrf" firstAttribute="top" secondItem="eD6-Z2-WJ3" secondAttribute="bottom" constant="12" id="IZ9-MK-7eP"/>
-                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="pdf-oK-hrf" secondAttribute="bottom" constant="58" id="WFg-rZ-VRI"/>
-                            <constraint firstItem="pdf-oK-hrf" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="b0b-vN-5kS"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="pdf-oK-hrf" secondAttribute="bottom" id="WFg-rZ-VRI"/>
+                            <constraint firstItem="pdf-oK-hrf" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" constant="29" id="b0b-vN-5kS"/>
                             <constraint firstItem="pdf-oK-hrf" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="f0o-qQ-PEN"/>
-                            <constraint firstItem="pdf-oK-hrf" firstAttribute="trailing" secondItem="eD6-Z2-WJ3" secondAttribute="trailing" id="u1S-0o-X1j"/>
+                            <constraint firstItem="pdf-oK-hrf" firstAttribute="trailing" secondItem="eD6-Z2-WJ3" secondAttribute="trailing" constant="16" id="u1S-0o-X1j"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
