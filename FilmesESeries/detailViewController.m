@@ -16,7 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.posterView.image = self.image;
+    self.posterView.image = self.filmeRecebido.poster;
+    self.filmName.text = self.filmeRecebido.name;
+    self.filmYear.text = self.filmeRecebido.year;
+    self.filmDescription.text = self.filmeRecebido.resume;
 }
 
 - (void)didReceiveMemoryWarning {

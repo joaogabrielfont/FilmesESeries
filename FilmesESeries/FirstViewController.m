@@ -7,11 +7,11 @@
 //
 
 #import "FirstViewController.h"
+#import "Filmes.h"
 
 
 @interface FirstViewController ()
-@property NSMutableArray* nomes;
-@property NSMutableArray* images;
+@property NSMutableArray* filmes;
 @property (nonatomic) CGFloat leftAndRightPaddings;
 @property (nonatomic) CGFloat numberOfItemsPerRow;
 @end
@@ -20,28 +20,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-[self.filmesCollectionView registerNib: [UINib nibWithNibName:@"MovieCell" bundle:nil] forCellWithReuseIdentifier:@"MovieCell"];
+    [self.filmesCollectionView registerNib: [UINib nibWithNibName:@"MovieCell" bundle:nil] forCellWithReuseIdentifier:@"MovieCell"];
     self.filmesCollectionView.delegate = self;
     self.filmesCollectionView.dataSource = self;
+    Filmes *film = [[Filmes alloc]init];
+    self.filmes = [[NSMutableArray alloc] initWithArray:film.fillArrayWithMovies];
     
-    self.nomes = [[NSMutableArray alloc] init];
-    self.images = [[NSMutableArray alloc] init];
-    
-    [self.nomes addObject:@"Homem Aranha: De Volta ao lar"];
-    [self.nomes addObject:@"Carros 3"];
-    [self.nomes addObject:@"Corra!"];
-    [self.nomes addObject:@"Mulher Maravilha"];
-    
-    [self.images addObject:[UIImage imageNamed:@"spidey"]];
-    [self.images addObject:[UIImage imageNamed:@"cars"]];
-    [self.images addObject:[UIImage imageNamed:@"corra"]];
-    [self.images addObject:[UIImage imageNamed:@"wonder"]];
     
     self.leftAndRightPaddings = 0;
     self.numberOfItemsPerRow = 3.0f;
-    
-    
-    
 }
 
 
@@ -74,27 +61,28 @@
     return 10.0f;
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 4;
+    return 14;
 }
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 4;
+    return 1;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    UIImage *temp = [self.images objectAtIndex:indexPath.row];
+    Filmes *temp  = [self.filmes objectAtIndex:indexPath.row];
     [self performSegueWithIdentifier:@"segueToDetails" sender:temp];
     
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     detailViewController* vc = [segue destinationViewController];
-    vc.image = (UIImage*) sender;
+    vc.filmeRecebido = (Filmes*) sender;
     
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MovieCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MovieCell" forIndexPath:indexPath];
-    cell.moviePoster.image = [self.images objectAtIndex:indexPath.row];
+    cell.moviePoster.image = [[self.filmes objectAtIndex:indexPath.row] poster];
+    cell.movieLabel.text = [[self.filmes objectAtIndex:indexPath.row] name];
     return cell;
 }
 
