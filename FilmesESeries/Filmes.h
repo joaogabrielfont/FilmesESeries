@@ -10,10 +10,10 @@
 #import <UIKit/UIKit.h>
 
 @interface Filmes : NSObject
-@property (strong, nonatomic) NSString* name;
-@property (strong, nonatomic) UIImage* poster;
-@property (strong, nonatomic) NSString* year;
-@property (strong, nonatomic) NSString* resume;
+    @property (strong, nonatomic) NSString* name;
+    @property (strong, nonatomic) UIImage* poster;
+    @property (strong, nonatomic) NSString* year;
+    @property (strong, nonatomic) NSString* resume;
 
 
 
