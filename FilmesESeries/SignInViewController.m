@@ -29,7 +29,21 @@
     Person* person = [[Person alloc] init];
     person.username = self.userNameTextField2.text;
     person.password = self.passwordTextField2.text;
+    [[FIRAuth auth] createUserWithEmail:person.username password:person.password completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
+        if (user){
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }
+        else {
+        
+        
+        }
+    }];
+    
+    
+}
+- (IBAction)didTapCloseButton:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+
 }
 
 /*

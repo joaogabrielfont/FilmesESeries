@@ -24,7 +24,14 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)didTapLoginButton:(id)sender {
+   [[FIRAuth auth] signInWithEmail:self.userNameTextField.text password:self.userPasswordTextField.text completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
+       if (user){
+           [self performSegueWithIdentifier:@"loginToHomeSegue" sender:nil];
+       }
+   }];
 }
+
+
 - (IBAction)didTabSignInButton:(id)sender {
     [self performSegueWithIdentifier:@"loginToSignInSegue" sender:nil];
 }

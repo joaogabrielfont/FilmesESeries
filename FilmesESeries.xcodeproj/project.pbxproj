@@ -11,6 +11,7 @@
 		7F1A01A51F39FB9A005F951C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1A01A41F39FB9A005F951C /* LoginViewController.m */; };
 		7F1A01A81F39FC40005F951C /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1A01A71F39FC40005F951C /* Person.m */; };
 		7F1A01AB1F39FE45005F951C /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1A01AA1F39FE45005F951C /* SignInViewController.m */; };
+		7F1A01AE1F3A1BBE005F951C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F1A01AD1F3A1BBE005F951C /* GoogleService-Info.plist */; };
 		7F4819861EF164CB002F2534 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4819851EF164CB002F2534 /* main.m */; };
 		7F4819891EF164CB002F2534 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4819881EF164CB002F2534 /* AppDelegate.m */; };
 		7F48198C1EF164CB002F2534 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F48198B1EF164CB002F2534 /* FirstViewController.m */; };
@@ -52,6 +53,7 @@
 		7F1A01A71F39FC40005F951C /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		7F1A01A91F39FE45005F951C /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		7F1A01AA1F39FE45005F951C /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		7F1A01AD1F3A1BBE005F951C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7F4819811EF164CB002F2534 /* FilmesESeries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilmesESeries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F4819851EF164CB002F2534 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7F4819871EF164CB002F2534 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 		7F4819831EF164CB002F2534 /* FilmesESeries */ = {
 			isa = PBXGroup;
 			children = (
+				7F1A01AD1F3A1BBE005F951C /* GoogleService-Info.plist */,
 				7F1A01A31F39FB9A005F951C /* LoginViewController.h */,
 				7F1A01A41F39FB9A005F951C /* LoginViewController.m */,
 				7F1A01A91F39FE45005F951C /* SignInViewController.h */,
@@ -318,6 +321,7 @@
 			files = (
 				7F4819971EF164CB002F2534 /* LaunchScreen.storyboard in Resources */,
 				7F4819941EF164CB002F2534 /* Assets.xcassets in Resources */,
+				7F1A01AE1F3A1BBE005F951C /* GoogleService-Info.plist in Resources */,
 				7F9E37DF1F052E9F005AE684 /* MovieCell.xib in Resources */,
 				7F4819921EF164CB002F2534 /* Main.storyboard in Resources */,
 			);

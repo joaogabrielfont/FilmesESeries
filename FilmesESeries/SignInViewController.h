@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@import FirebaseAuth;
 
 @interface SignInViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *userNameTextField2;
