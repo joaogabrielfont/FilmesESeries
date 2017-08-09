@@ -31,7 +31,9 @@
     person.password = self.passwordTextField2.text;
     [[FIRAuth auth] createUserWithEmail:person.username password:person.password completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
         if (user){
-            [self dismissViewControllerAnimated:YES completion:nil];
+            [self dismissViewControllerAnimated:YES completion:^{
+                [self.delegate getSignedInPerson:person];
+            }];
         }
         else {
         

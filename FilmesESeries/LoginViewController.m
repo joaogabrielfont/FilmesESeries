@@ -7,8 +7,9 @@
 //
 
 #import "LoginViewController.h"
+#import "SignInViewController.h"
 
-@interface LoginViewController ()
+@interface LoginViewController () <SignInViewControllerDelegate>
 
 @end
 
@@ -37,6 +38,13 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString: @"loginToSignInSegue"]) {
+        SignInViewController* vc = segue.destinationViewController;
+        vc.delegate = self;
+    }
+}
+
+- (void)getSignedInPerson:(Person *)person {
 
 }
 
