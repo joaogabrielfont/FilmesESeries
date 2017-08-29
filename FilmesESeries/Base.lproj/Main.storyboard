@@ -24,13 +24,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filmes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2i-Xe-ccM">
-                                <rect key="frame" x="137.5" y="48" width="100" height="47"/>
+                                <rect key="frame" x="138" y="32" width="100" height="57"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="36"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xbR-oZ-06G">
-                                <rect key="frame" x="0.0" y="107" width="375" height="511"/>
+                                <rect key="frame" x="0.0" y="101" width="375" height="487"/>
                                 <color key="backgroundColor" red="0.16078431369999999" green="0.50196078430000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="5Yd-GK-Khe">
                                     <size key="itemSize" width="50" height="50"/>
@@ -45,14 +45,35 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bem vindo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5p-Ac-wCr">
+                                <rect key="frame" x="16" y="590" width="81" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02u-Wh-0KS">
+                                <rect key="frame" x="105" y="590" width="254" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.16078431369999999" green="0.50196078430000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="xbR-oZ-06G" firstAttribute="top" secondItem="f2i-Xe-ccM" secondAttribute="bottom" constant="12" id="1cQ-cW-eyz"/>
+                            <constraint firstItem="xbR-oZ-06G" firstAttribute="top" secondItem="f2i-Xe-ccM" secondAttribute="bottom" constant="12" id="1cQ-cW-eyz" userLabel="Filmes Collection View.top = Filmes Label.bottom + 25"/>
+                            <constraint firstItem="02u-Wh-0KS" firstAttribute="top" secondItem="xbR-oZ-06G" secondAttribute="bottom" constant="2" id="G6Y-Hj-bzA"/>
                             <constraint firstItem="xbR-oZ-06G" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-16" id="IOG-V1-s2j"/>
+                            <constraint firstItem="02u-Wh-0KS" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="KYa-gZ-bCL"/>
                             <constraint firstItem="xbR-oZ-06G" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="NE1-yE-TnP"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="xbR-oZ-06G" secondAttribute="bottom" id="TWp-5F-yXC"/>
-                            <constraint firstItem="xbR-oZ-06G" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" constant="29" id="aoM-3v-DQV"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="02u-Wh-0KS" secondAttribute="bottom" constant="7" id="Qgf-8K-77Z"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="L5p-Ac-wCr" secondAttribute="bottom" constant="7" id="RdS-mq-iiU"/>
+                            <constraint firstItem="L5p-Ac-wCr" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="Xex-E7-G6L"/>
+                            <constraint firstItem="xbR-oZ-06G" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" constant="11" id="aoM-3v-DQV"/>
+                            <constraint firstItem="02u-Wh-0KS" firstAttribute="leading" secondItem="L5p-Ac-wCr" secondAttribute="trailing" constant="8" id="c1K-SE-3tW"/>
+                            <constraint firstItem="02u-Wh-0KS" firstAttribute="top" secondItem="xbR-oZ-06G" secondAttribute="bottom" constant="2" id="ekx-mi-aGR"/>
+                            <constraint firstItem="02u-Wh-0KS" firstAttribute="baseline" secondItem="L5p-Ac-wCr" secondAttribute="baseline" id="oO2-ak-dFR"/>
+                            <constraint firstItem="f2i-Xe-ccM" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="12" id="wxx-je-0yj"/>
+                            <constraint firstItem="L5p-Ac-wCr" firstAttribute="top" secondItem="xbR-oZ-06G" secondAttribute="bottom" constant="2" id="xk7-bK-FQH"/>
                             <constraint firstItem="xbR-oZ-06G" firstAttribute="centerX" secondItem="f2i-Xe-ccM" secondAttribute="centerX" id="yxi-OZ-NHa"/>
                         </constraints>
                     </view>
@@ -60,6 +81,7 @@
                     <connections>
                         <outlet property="filmesCollectionView" destination="xbR-oZ-06G" id="nPV-Cw-sbo"/>
                         <outlet property="filmesLabel" destination="f2i-Xe-ccM" id="00q-L9-s67"/>
+                        <outlet property="nameLabel" destination="02u-Wh-0KS" id="BSu-Rl-vok"/>
                         <segue destination="wFG-BH-hKc" kind="show" identifier="segueToDetails" id="5t1-RC-Nd1"/>
                     </connections>
                 </viewController>
@@ -279,7 +301,7 @@
                     <connections>
                         <outlet property="userNameTextField" destination="eNJ-n8-Wiv" id="x5u-Z1-Y9h"/>
                         <outlet property="userPasswordTextField" destination="43b-WZ-RdP" id="pVl-uO-mpv"/>
-                        <segue destination="49e-Tb-3d3" kind="show" identifier="loginToHomeSegue" id="Zbj-a4-9qT"/>
+                        <segue destination="9pv-A4-QxB" kind="show" identifier="loginToHomeSegue" id="UCv-vX-HiQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OeC-eb-7Rm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -391,4 +413,7 @@
     <resources>
         <image name="first" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="u7Y-xg-7CH"/>
+    </inferredMetricsTieBreakers>
 </document>

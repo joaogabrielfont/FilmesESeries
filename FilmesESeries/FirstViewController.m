@@ -8,12 +8,14 @@
 
 #import "FirstViewController.h"
 #import "Filmes.h"
+#import "Person.h"
 
 
 @interface FirstViewController ()
 @property NSMutableArray* filmes;
 @property (nonatomic) CGFloat leftAndRightPaddings;
 @property (nonatomic) CGFloat numberOfItemsPerRow;
+
 @end
 
 @implementation FirstViewController
@@ -25,6 +27,7 @@
     self.filmesCollectionView.dataSource = self;
     Filmes *film = [[Filmes alloc]init];
     self.filmes = [[NSMutableArray alloc] initWithArray:film.fillArrayWithMovies];
+    self.nameLabel.text = self.loggedPerson.username;
     
     
     self.leftAndRightPaddings = 0;

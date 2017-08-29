@@ -8,6 +8,8 @@
 
 #import "LoginViewController.h"
 #import "SignInViewController.h"
+#import "FirstViewController.h"
+#import "Person.h"
 
 @interface LoginViewController () <SignInViewControllerDelegate>
 
@@ -27,7 +29,10 @@
 - (IBAction)didTapLoginButton:(id)sender {
    [[FIRAuth auth] signInWithEmail:self.userNameTextField.text password:self.userPasswordTextField.text completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
        if (user){
-           [self performSegueWithIdentifier:@"loginToHomeSegue" sender:nil];
+           Person *temp = [[Person alloc]init];
+           temp.username = self.userNameTextField.text;
+           temp.password = nil;
+           [self performSegueWithIdentifier:@"loginToHomeSegue" sender:temp];
        }
    }];
 }
@@ -41,6 +46,10 @@
     if ([segue.identifier isEqualToString: @"loginToSignInSegue"]) {
         SignInViewController* vc = segue.destinationViewController;
         vc.delegate = self;
+    }
+    else if ([segue.identifier isEqualToString:@"loginToHomeSegue"]){
+        FirstViewController* vc2 = segue.destinationViewController;
+        vc2.loggedPerson = (Person*) sender;
     }
 }
 
