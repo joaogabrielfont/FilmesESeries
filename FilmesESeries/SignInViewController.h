@@ -11,6 +11,7 @@
 @import FirebaseAuth;
 
 
+
 @protocol SignInViewControllerDelegate <NSObject>
 
 - (void) getSignedInPerson: (Person*) person;

@@ -3,4 +3,5 @@ target "FilmesESeries" do
     platform :ios, '7.0'
     pod 'AFNetworking', '~> 2.5'
     pod 'Firebase/Auth'
+    pod 'Firebase/Database'
 end

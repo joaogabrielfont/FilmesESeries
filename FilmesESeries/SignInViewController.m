@@ -8,6 +8,7 @@
 
 #import "SignInViewController.h"
 #import "Person.h"
+@import FirebaseDatabase;
 
 @interface SignInViewController ()
 
@@ -31,6 +32,7 @@
     person.password = self.passwordTextField2.text;
     [[FIRAuth auth] createUserWithEmail:person.username password:person.password completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
         if (user){
+            [[[[FIRDatabase.database.reference child:@"users"] child:user.uid] child:@"name"] setValue:@"Joao"];
             [self dismissViewControllerAnimated:YES completion:^{
                 [self.delegate getSignedInPerson:person];
             }];
